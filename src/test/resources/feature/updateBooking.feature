@@ -4,7 +4,7 @@ Feature: Update Booking
     * def responseOfCreateToken = call read("classpath://feature//createToken.feature")
     * def body = read("classpath://json//update_booking.json")
   Scenario: Update Booking scenario
-    Given url 'https://restful-booker.herokuapp.com'
+    Given url host
     And path '/booking/'+responseOfCreateBooking.response.bookingid
     And header Content-type = 'application/json'
     And header Accept = 'application/json'

@@ -4,7 +4,7 @@ Feature: Create Booking
     * def body = read("classpath://json//create_booking.json")
 
   Scenario: Create booking scenario
-    Given url 'https://restful-booker.herokuapp.com'
+    Given url host
     And path '/booking'
     And header Content-type = "application/json"
     And header Accept = "application/json"
